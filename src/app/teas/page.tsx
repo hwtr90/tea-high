@@ -120,8 +120,7 @@ export default function TeasPage() {
               onAddTea={handleAddTea}
               onTeaClick={handleTeaClick}
               onEditTea={handleEditTea}
-              onDeleteTea={handleDeleteTea}
-              onToggleStock={handleToggleStock}
+              showActions={false}
             />
           </>
         ) : (

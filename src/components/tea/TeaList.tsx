@@ -137,8 +137,6 @@ export const TeaList: React.FC<TeaListProps> = ({
                 tea={tea}
                 onClick={onTeaClick}
                 onEdit={onEditTea}
-                onDelete={onDeleteTea}
-                onToggleStock={onToggleStock}
                 showActions={showActions}
                 className={viewMode === 'list' ? 'max-w-none' : ''}
               />
@@ -166,8 +164,6 @@ export const TeaList: React.FC<TeaListProps> = ({
                 tea={tea}
                 onClick={onTeaClick}
                 onEdit={onEditTea}
-                onDelete={onDeleteTea}
-                onToggleStock={onToggleStock}
                 showActions={showActions}
                 className={cn(
                   'opacity-75 hover:opacity-100 transition-opacity',

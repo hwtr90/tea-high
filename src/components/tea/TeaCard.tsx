@@ -153,7 +153,7 @@ export const TeaCard: React.FC<TeaCardProps> = ({
         </div>
 
         {/* Action Buttons */}
-        {showActions && (
+        {showActions ? (
           <div className="flex items-center gap-2" data-action>
             {onToggleStock && (
               <button
@@ -199,6 +199,18 @@ export const TeaCard: React.FC<TeaCardProps> = ({
               </button>
             )}
           </div>
+        ) : onEdit && (
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              onEdit(tea);
+            }}
+            className="px-3 py-1 text-sm text-blue-600 hover:bg-blue-50 rounded-md font-medium transition-colors"
+            data-action
+            title="Edit tea details"
+          >
+            Edit
+          </button>
         )}
       </div>
 
