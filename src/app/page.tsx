@@ -5,6 +5,7 @@ import { Input } from '@/components/ui/Input';
 import { Select } from '@/components/ui/Select';
 import { TextArea } from '@/components/ui/TextArea';
 import { Rating } from '@/components/ui/Rating';
+import { Switch } from '@/components/ui/Switch';
 import { 
   SearchIcon, 
   ThermometerIcon, 
@@ -515,6 +516,95 @@ export default function Home() {
           </div>
         </div>
 
+        {/* Switch Demo */}
+        <div className="bg-white rounded-xl p-6 shadow-sm">
+          <h2 className="text-xl font-semibold text-gray-900 mb-4">
+            Component Demo: Switch Toggle
+          </h2>
+          
+          <div className="space-y-6">
+            {/* Tea Switch Examples */}
+            <div className="space-y-4">
+              <h3 className="text-sm font-medium text-gray-700">Tea Stock Management</h3>
+              
+              <Switch
+                label="In Stock"
+                helperText="Toggle to mark tea as in stock or out of stock"
+                color="green"
+                size="md"
+              />
+
+              <Switch
+                label="Premium Tea"
+                defaultChecked={true}
+                helperText="Mark as premium quality tea"
+                color="purple"
+                size="md"
+              />
+
+              <Switch
+                label="Favorite Tea"
+                helperText="Add to your favorites collection"
+                color="blue"
+                size="md"
+              />
+            </div>
+
+            {/* Different Configurations */}
+            <div className="space-y-4">
+              <h3 className="text-sm font-medium text-gray-700">Switch Configurations</h3>
+              
+              <Switch
+                label="Small Switch"
+                size="sm"
+                color="green"
+                helperText="Compact size for tight spaces"
+              />
+
+              <Switch
+                label="Large Switch"
+                size="lg"
+                color="blue"
+                helperText="Large size for emphasis"
+              />
+
+              <Switch
+                label="Different Colors"
+                defaultChecked={true}
+                color="red"
+                helperText="Various color options available"
+              />
+
+              <Switch
+                label="Disabled Switch"
+                defaultChecked={true}
+                disabled={true}
+                helperText="Switch in disabled state"
+              />
+            </div>
+
+            {/* Inline Switches */}
+            <div className="space-y-4">
+              <h3 className="text-sm font-medium text-gray-700">Inline Switches (No Label)</h3>
+              
+              <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                <span className="text-sm font-medium text-gray-700">Enable notifications</span>
+                <Switch color="blue" size="sm" />
+              </div>
+
+              <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                <span className="text-sm font-medium text-gray-700">Dark mode</span>
+                <Switch color="purple" size="sm" />
+              </div>
+
+              <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                <span className="text-sm font-medium text-gray-700">Auto-sync</span>
+                <Switch color="green" size="sm" defaultChecked={true} />
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Icon Library Demo */}
         <div className="bg-white rounded-xl p-6 shadow-sm">
           <h2 className="text-xl font-semibold text-gray-900 mb-4">
@@ -678,6 +768,13 @@ export default function Home() {
               size="md"
               showNumbers={false}
             />
+
+            <Switch
+              label="In Stock"
+              helperText="Test switch toggle on mobile"
+              color="green"
+              size="md"
+            />
             
             <div className="grid grid-cols-2 gap-3">
               <Button variant="primary" size="md">
@@ -691,12 +788,29 @@ export default function Home() {
         </div>
 
         {/* Progress Section */}
-        <div className="text-center text-gray-500 text-sm">
-          <p>🎉 UI Component Library Complete!</p>
-          <p>🚀 All Components: Button ✅ Input ✅ Icons ✅ Select ✅ TextArea ✅ Slider Rating ✅</p>
-          <p>✨ Clean slider design - no more repetitive stars!</p>
-          <p>📱 Mobile-optimized sliders with touch-friendly interactions</p>
-          <p>Next: Build tea management pages with mock data</p>
+        <div className="text-center space-y-4">
+          <div className="text-gray-500 text-sm">
+            <p>🎉 UI Component Library Complete!</p>
+            <p>🚀 All Components: Button ✅ Input ✅ Icons ✅ Select ✅ TextArea ✅ Slider Rating ✅ Switch ✅</p>
+            <p>✨ Clean slider design - no more repetitive stars!</p>
+            <p>🔄 New Switch component for stock management!</p>
+            <p>📱 Mobile-optimized components with touch-friendly interactions</p>
+          </div>
+          
+          <div className="bg-blue-50 rounded-lg p-6 max-w-md mx-auto">
+            <div className="text-blue-900 font-medium mb-2">
+              🚀 NEW: Tea Management Interface
+            </div>
+            <p className="text-blue-700 text-sm mb-4">
+              See all components working together in a real tea tracking app with mock data!
+            </p>
+            <a 
+              href="/teas" 
+              className="inline-flex items-center px-4 py-2 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors"
+            >
+              🍵 View Tea Collection
+            </a>
+          </div>
         </div>
       </div>
     </div>

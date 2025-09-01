@@ -24,7 +24,11 @@ import {
   Camera,
   Image,
   MapPin,
-  Calendar
+  Calendar,
+  ArrowLeft,
+  Beaker,
+  Package,
+  Package2
 } from 'lucide-react';
 
 // Re-export Lucide icons with consistent naming for Tea High
@@ -53,6 +57,10 @@ export const CameraIcon = Camera;
 export const ImageIcon = Image;
 export const LocationIcon = MapPin;
 export const CalendarIcon = Calendar;
+export const ArrowLeftIcon = ArrowLeft;
+export const FlaskIcon = Beaker;
+export const PackageIcon = Package;
+export const Package2Icon = Package2;
 
 // Custom Tea-Specific Icons (add as needed)
 // Example: Future custom tea leaf icon, tea cup icon, etc.
